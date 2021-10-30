@@ -1,0 +1,32 @@
+﻿<Window x:Class="HFM.Desktop.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HFM.Desktop"
+        mc:Ignorable="d"
+        Title="HandsFreeMuter" Height="250" Width="300">
+  <Grid Margin="10">
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition />
+      <ColumnDefinition />
+    </Grid.ColumnDefinitions>
+
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto"></RowDefinition>
+      <RowDefinition></RowDefinition>
+    </Grid.RowDefinitions>
+
+    <Label>Devices</Label>
+    <ListBox Grid.Row="1" x:Name="lstDevices"></ListBox>
+
+    <StackPanel Grid.Row="1" Grid.Column="1" Margin="5,0,0,0">
+      <TextBox x:Name="txtName"/>
+      <Button x:Name="btnAdd" Margin="0,5,0,0"
+              Click="ButtonAddName_Click">
+        Add Name
+      </Button>
+    </StackPanel>
+
+  </Grid>
+</Window>
